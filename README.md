@@ -45,7 +45,7 @@ Ionize CMS module for the storage and management of e-mail-adresses.
 					$result['message'] = lang($form['messages']['success']);
 				}
 
-- Than enter the following snippet right after it
+- Then, enter the following snippet right after it
 
 				//DH Webservice Newsletter Module
 				//Condition that decided if data is saved or not. Example: check if the Checkbox "Yes, send me newsletter" has been ticked
