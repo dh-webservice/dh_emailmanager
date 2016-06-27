@@ -6,7 +6,7 @@ Ionize CMS module for the storage and management of e-mail-adresses.
 - Add, edit and delete data in the backend section of the module
 - Export the gathered data to a CSV (Excel) File
 
-# Ionize Versions
+# Compatible Ionize Versions
 - Tested for the versions 1.0.7 and 1.0.8
 - In order to get it working on version 1.0.8 a modifcation of the core is necessary:
   + go to application/core/MY_Controller.php
