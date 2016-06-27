@@ -1,0 +1,44 @@
+h2.main.demo {
+    background: url(../images/envelope.png) no-repeat 0 0;
+}
+
+.dh_display_inline_block{
+	display:inline-block;	
+}
+.dh_cell_width_xs{
+	width:30px;
+	overflow:hidden;
+}
+.dh_cell_width_sm{
+	width:100px;
+	overflow:hidden;
+}
+.dh_cell_width_lg{
+	width:300px;
+	overflow:hidden;
+}
+
+.dh_cell_padding_left_sm {
+    padding-left: 15px;
+}
+.dh_cell_padding_left_md {
+    padding-left: 18px;
+}
+.dh_cell_padding_left_lg {
+    padding-left: 28px;
+}
+.dh_cell_padding_left_xl {
+    padding-left: 38px;
+}
+.dh_cell_padding_left_xxl {
+    padding-left: 48px;
+}
+.csv_container{
+	margin:10px 0;
+}
+.csv_container textarea{
+	display:none;	
+}
+.csv_container input[type="submit"]{
+	padding:5px 10px;
+}

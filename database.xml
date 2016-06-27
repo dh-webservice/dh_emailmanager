@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sql>
+    <name>Ionize Demo Module Database Creation</name>
+    <version>1.0</version>
+    <license>Open Source MIT license</license>
+ 
+    <!--
+    Module's tables
+    Prefixed by module_<module name> to avoid collision
+      -->
+    <tables>
+ 
+        <!--
+            Author table
+            One author has a name and a gender
+        -->
+        <query>
+            CREATE TABLE IF NOT EXISTS module_dh_emailmanager_newsletter (
+                id INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+				time TIMESTAMP,
+                email VARCHAR(255) NULL UNIQUE,
+                name VARCHAR(255) NULL,
+                lang VARCHAR(255) NULL,				
+                PRIMARY KEY (id)
+            )
+            ENGINE = InnoDB
+            AUTO_INCREMENT = 1
+            DEFAULT CHARACTER SET = utf8
+            COLLATE = utf8_unicode_ci;
+        </query>
+ 
+ 
+    </tables>
+ 
+    <!--
+        Content inserted at module's installation
+    -->
+    <content>
+ 
+        <query>
+            INSERT IGNORE INTO module_dh_emailmanager_newsletter (email, name, lang)
+            VALUES
+                ('info@test1.com', 'Test Test1', 'en'),
+                ('info@test2.com', 'Test Test2', 'de'),
+                ('info@test3.com', 'Test Test3', 'it');
+        </query>
+  
+    </content>
+</sql>

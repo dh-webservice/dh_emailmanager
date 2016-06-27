@@ -20,8 +20,7 @@ Ionize CMS module for the storage and management of e-mail-adresses.
 - The dh_emailmanager module has only been tested in combination with the Ajaxform module, but it should also be working with the classic ionize contact form system
 
 # Installation
-- Download Dh_emailmanager.zip and unpack it
-- Move it to the folder modules of your ionize installation and upload it to your server
+- Clone the repository into your modules folder or download the sources
 - Go to the ionize backend and choose Modules > Module Administration
 - Install the module by clicking
 - Refresh the backend
@@ -33,32 +32,38 @@ Ionize CMS module for the storage and management of e-mail-adresses.
 - Open the file modules/Ajaxform/controllers/ajaxform.php
 - Enter this code snippet to the end of public function __construct()
 
-		//DH Webservice Newsletter Module
-        $this->load->model('dh_emailmanager_model', 'author_model', true);
+```php
+//DH Webservice Newsletter Module
+$this->load->model('dh_emailmanager_model', 'author_model', true);
+```
 
 - Enter a second code snippet to public function post()
 - Search for this code
 
-				if ( ! isset($result['title']) && ! isset($result['message']))
-				{
-					$result['title'] = lang('form_alert_success_title');
-					$result['message'] = lang($form['messages']['success']);
-				}
+```php
+if ( ! isset($result['title']) && ! isset($result['message']))
+{
+	$result['title'] = lang('form_alert_success_title');
+	$result['message'] = lang($form['messages']['success']);
+}
+```
 
 - Then, enter the following snippet right after it
 
-				//DH Webservice Newsletter Module
-				//Condition that decided if data is saved or not. Example: check if the Checkbox "Yes, send me newsletter" has been ticked
-				if ($this->input->post('newsletter') != '')
-				{				
-					//Synchronize form variables and module variables (= DB table column names)
-					$dh_sync_ar=array(
-						'email'		=> $this->input->post('email'),
-						'name'		=> $this->input->post('first_name').' '.$this->input->post('surname'),
-						'lang'		=> $this->input->post('lang_code')
-					);
-					$id = $this->author_model->save($dh_sync_ar);
-				}		
+```php
+//DH Webservice Newsletter Module
+//Condition that decided if data is saved or not. Example: check if the Checkbox "Yes, send me newsletter" has been ticked
+if ($this->input->post('newsletter') != '')
+{				
+	//Synchronize form variables and module variables (= DB table column names)
+	$dh_sync_ar=array(
+		'email'		=> $this->input->post('email'),
+		'name'		=> $this->input->post('first_name').' '.$this->input->post('surname'),
+		'lang'		=> $this->input->post('lang_code')
+	);
+	$id = $this->author_model->save($dh_sync_ar);
+}		
+```
 
 - The second snippet allows us to chose which form fields should be saved in which column of our DB table
 
@@ -67,7 +72,9 @@ Ionize CMS module for the storage and management of e-mail-adresses.
 - Only if the user accepts the sites terms and conditions and opts in to be on the newsletter list, site owners are allowed to send newsletters
 - This aspect is taken into account by the code in the snippet added to public function post() in modules/Ajaxform/controllers/ajaxform.php
 
-					if ($this->input->post('newsletter') != '')
+```php
+if ($this->input->post('newsletter') != '')
+```
 
 #Languages
 - The module contains English, German and Italian translations
