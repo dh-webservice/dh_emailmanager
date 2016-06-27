@@ -1,8 +1,8 @@
 # dh_emailmanager
-Ionize CMS module for the storage and management of e-mail-adresses
+Ionize CMS module for the storage and management of e-mail-adresses.
 
-# Abilities
-- Save email, name, and language of the user submitting a contact form
+# Capabilities
+- Save email addresses, name, and language of the user submitting a contact form
 - Add, edit and delete data in the backend section of the module
 - Export the gathered data to a CSV (Excel) File
 
@@ -21,8 +21,8 @@ Ionize CMS module for the storage and management of e-mail-adresses
 
 # Installation
 - Download Dh_emailmanager.zip and unpack it
-- Move it to the folder modules of your ionize installation and upload
-- Go to the ionize backend choose Modules > Module Administration
+- Move it to the folder modules of your ionize installation and upload it to your server
+- Go to the ionize backend and choose Modules > Module Administration
 - Install the module by clicking
 - Refresh the backend
 - Now in the Modules submenu should appear "DH Webservice Email Manager"
@@ -62,7 +62,7 @@ Ionize CMS module for the storage and management of e-mail-adresses
 
 - The second snippet allows us to chose which form fields should be saved in which column of our DB table
 
-# Accept Newsletter Policy
+# Accepting the Newsletter Policy
 - In accordance to most coutries law regulations, the module assumes that the contact form on your website features a checkbox that allows the user to choose freely if he wants or not to join the newsletter list under the site's terms and conditions.
 - Only if the user accepts the sites terms and conditions and opts in to be on the newsletter list, site owners are allowed to send newsletters
 - This aspect is taken into account by the code in the snippet added to public function post() in modules/Ajaxform/controllers/ajaxform.php
