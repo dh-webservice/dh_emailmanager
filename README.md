@@ -16,6 +16,7 @@ Ionize CMS module for the storage and management of e-mail-adresses
 
 # Requirements
 - The Ajaxform module must be installed (standard ionize CMS module)
+- The dh_emailmanager module works also without the Ajaxform installed, but it is probable that we not just want to manage email addresses and contact data in our backend, we also want to get the data directly from contact form submitters
 - The dh_emailmanager module has only been tested in combination with the Ajaxform module, but it should also be working with the classic ionize contact form system
 
 # Installation
