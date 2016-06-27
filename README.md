@@ -25,4 +25,9 @@ Ionize CMS module for the storage and management of e-mail-adresses
 - Install the module by clicking
 - Refresh the backend
 - Now in the Modules submenu should appear "DH Webservice Email Manager"
-- Under "DH Webservice Email Manager" you should now see three 
+- Under "DH Webservice Email Manager" you should now see 3 test entries
+
+# How to get dh_emailmanager working togehter with Ajaxform Module
+- Obviously we not just want to manage email addresses and contact data in our backend, we also want to get the data directly from contact form submitters
+- Open the file modules/Ajaxform/controllers/ajaxform.php
+- 
