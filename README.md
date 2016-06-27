@@ -30,4 +30,3 @@ Ionize CMS module for the storage and management of e-mail-adresses
 # How to get dh_emailmanager working togehter with Ajaxform Module
 - Obviously we not just want to manage email addresses and contact data in our backend, we also want to get the data directly from contact form submitters
 - Open the file modules/Ajaxform/controllers/ajaxform.php
-- 
