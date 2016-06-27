@@ -35,18 +35,28 @@ Ionize CMS module for the storage and management of e-mail-adresses
 		//DH Webservice Newsletter Module
         $this->load->model('dh_emailmanager_model', 'author_model', true);
 
-- Enter this code snippet to the end of public function __construct()
+- Enter a second code snippet to public function post()
+- Search for this code
+
+				if ( ! isset($result['title']) && ! isset($result['message']))
+				{
+					$result['title'] = lang('form_alert_success_title');
+					$result['message'] = lang($form['messages']['success']);
+				}
+
+- Than enter the following snippet right after it
 
 				//DH Webservice Newsletter Module
 				//Condition that decided if data is saved or not. Example: check if the Checkbox "Yes, send me newsletter" has been ticked
 				if ($this->input->post('newsletter') != '')
 				{				
 					//Synchronize form variables and module variables (= DB table column names)
-					$dh_test_ar=array(
+					$dh_sync_ar=array(
 						'email'		=> $this->input->post('email'),
-						'name'		=> $this->input->post('vorname').' '.$this->input->post('nachname'),
+						'name'		=> $this->input->post('first_name').' '.$this->input->post('surname'),
 						'lang'		=> $this->input->post('lang_code')
 					);
-					$id = $this->author_model->save($dh_test_ar);
-					#$id = $this->author_model->save($this->input->post());
+					$id = $this->author_model->save($dh_sync_ar);
 				}		
+
+- The second snippet allows us to chose which form fields should be saved in which column of our DB table
