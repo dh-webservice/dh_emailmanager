@@ -71,4 +71,4 @@ Ionize CMS module for the storage and management of e-mail-adresses.
 
 #Languages
 - The module contains English, German and Italian translations
-- As for every ionize modules, any language can be easily added by copying and editing the module's language folders
+- As for every ionize module, any language can be easily added by copying and editing the module's language folders
