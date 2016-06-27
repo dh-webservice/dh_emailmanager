@@ -30,3 +30,23 @@ Ionize CMS module for the storage and management of e-mail-adresses
 # How to get dh_emailmanager working togehter with Ajaxform Module
 - Obviously we not just want to manage email addresses and contact data in our backend, we also want to get the data directly from contact form submitters
 - Open the file modules/Ajaxform/controllers/ajaxform.php
+- Enter this code snippet to the end of public function __construct()
+
+		//DH Webservice Newsletter Module
+        $this->load->model('dh_emailmanager_model', 'author_model', true);
+
+- Enter this code snippet to the end of public function __construct()
+
+				//DH Webservice Newsletter Module
+				//Condition that decided if data is saved or not. Example: check if the Checkbox "Yes, send me newsletter" has been ticked
+				if ($this->input->post('newsletter') != '')
+				{				
+					//Synchronize form variables and module variables (= DB table column names)
+					$dh_test_ar=array(
+						'email'		=> $this->input->post('email'),
+						'name'		=> $this->input->post('vorname').' '.$this->input->post('nachname'),
+						'lang'		=> $this->input->post('lang_code')
+					);
+					$id = $this->author_model->save($dh_test_ar);
+					#$id = $this->author_model->save($this->input->post());
+				}		
