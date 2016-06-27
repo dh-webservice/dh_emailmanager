@@ -1,6 +1,11 @@
 # dh_emailmanager
 Ionize CMS module for the storage and management of e-mail-adresses
 
+# Abilities
+- Save email, name, and language of the user submitting a contact form
+- Add, edit and delete data in the backend section of the module
+- Export the gathered data to a CSV (Excel) File
+
 # Ionize Versions
 - Tested for the versions 1.0.7 and 1.0.8
 - In order to get it working on version 1.0.8 a modifcation of the core is necessary:
