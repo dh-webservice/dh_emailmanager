@@ -17,3 +17,12 @@ Ionize CMS module for the storage and management of e-mail-adresses
 # Requirements
 - The Ajaxform module must be installed (standard ionize CMS module)
 - The dh_emailmanager module has only been tested in combination with the Ajaxform module, but it should also be working with the classic ionize contact form system
+
+# Installation
+- Download Dh_emailmanager.zip and unpack it
+- Move it to the folder modules of your ionize installation and upload
+- Go to the ionize backend choose Modules > Module Administration
+- Install the module by clicking
+- Refresh the backend
+- Now in the Modules submenu should appear "DH Webservice Email Manager"
+- Under "DH Webservice Email Manager" you should now see three 
