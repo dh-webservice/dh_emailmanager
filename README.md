@@ -14,3 +14,6 @@ Ionize CMS module for the storage and management of e-mail-adresses
   + change $limit_to_module_folder = TRUE  to  $limit_to_module_folder = FALSE
   + read this post to discover why this is necessary: http://ionizecms.com/forum/viewtopic.php?id=2234
 
+# Requirements
+- The Ajaxform module must be installed (standard ionize CMS module)
+- The dh_emailmanager module has only been tested in combination with the Ajaxform module, but it should also be working with the classic ionize contact form system
