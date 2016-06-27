@@ -68,3 +68,7 @@ Ionize CMS module for the storage and management of e-mail-adresses.
 - This aspect is taken into account by the code in the snippet added to public function post() in modules/Ajaxform/controllers/ajaxform.php
 
 					if ($this->input->post('newsletter') != '')
+
+#Languages
+- The module contains English, German and Italian translations
+- As for every ionize modules, any language can be easily added by copying and editing the module's language folders
