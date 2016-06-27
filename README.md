@@ -64,6 +64,6 @@ Ionize CMS module for the storage and management of e-mail-adresses
 # Accept Newsletter Policy
 - In accordance to most coutries law regulations, the module assumes that the contact form on your website features a checkbox that allows the user to choose freely if he wants or not to join the newsletter list under the site's terms and conditions.
 - Only if the user accepts the sites terms and conditions and opts in to be on the newsletter list, site owners are allowed to send newsletters
-- This aspect is take into account by the code in the snippet added to public function post() in modules/Ajaxform/controllers/ajaxform.php
+- This aspect is taken into account by the code in the snippet added to public function post() in modules/Ajaxform/controllers/ajaxform.php
 
 					if ($this->input->post('newsletter') != '')
